@@ -30,15 +30,17 @@
 
 const csFirstUniqueChar = (input_str) => {
     const array = input_str.split("")
-    for (index = 0; index < 20; index++){
+    for (index = 0; index < input_str.length; index++){
         if (array[index] === array[index - 1]) {
+        } else if (array[index] === array[index + 1]) {
         } else if (index != 0) {
             return index
         } 
     }
+    return false
 }
 
-console.log(csFirstUniqueChar('aaabcccdeee'))
+console.log(csFirstUniqueChar('5558666'))
 
 //output = '3'
 
